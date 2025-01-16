@@ -7,7 +7,8 @@ public class Application {
         int c = 3;
 //        greetings();
 //        checkSign(a, b, c);
-        selectColor();
+//        selectColor();
+        compareNumbers();
     }
 
     public static void greetings() {
@@ -28,6 +29,13 @@ public class Application {
         if (data <= 10 ) System.out.println("Красный");
         if (data > 10 && data <= 20) System.out.println("Желтый");
         if (data > 20) System.out.println("Зеленый");
+    }
+
+    public static void compareNumbers() {
+        int a = 60;
+        int b = 20;
+        if (a >= b) System.out.println("a>=b");
+        else System.out.println("a<b");
     }
 }
 
