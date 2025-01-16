@@ -5,10 +5,14 @@ public class Application {
         int a = 1;
         int b = 2;
         int c = 3;
+        int initValue = 10;
+        int delta =5;
+        boolean increment = false;
 //        greetings();
 //        checkSign(a, b, c);
 //        selectColor();
-        compareNumbers();
+//        compareNumbers();
+        addOrSubtractAndPrint(initValue, delta, increment);
     }
 
     public static void greetings() {
@@ -36,6 +40,11 @@ public class Application {
         int b = 20;
         if (a >= b) System.out.println("a>=b");
         else System.out.println("a<b");
+    }
+
+    public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment){
+        if (increment == true) System.out.println(initValue + delta);
+        else System.out.println(initValue-delta);
     }
 }
 
