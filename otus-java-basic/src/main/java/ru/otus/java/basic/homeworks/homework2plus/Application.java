@@ -7,11 +7,11 @@ public class Application {
         int[] a = {1, 2, 3};
         int[] b = {2, 2};
         int[] c = {1, 1, 1, 1, 1};
-//        sumArray(a, b, c);
         int[] d = {1, 1, 1, 1, 1, 5};
-//        pointArray(d);
         int[] e = {1, 2, 3, 4, 5};
-//        checkSortArray(e);
+        sumArray(a, b, c);
+        pointArray(d);
+        checkSortArray(e);
         reverseArray(e);
     }
 
