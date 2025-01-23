@@ -11,7 +11,8 @@ public class Application {
         int[] d = {1, 1, 1, 1, 1, 5};
 //        pointArray(d);
         int[] e = {1, 2, 3, 4, 5};
-        checkSortArray(e);
+//        checkSortArray(e);
+        reverseArray(e);
     }
 
     public static void sumArray(int[] arr1, int[] arr2, int[] arr3) {
@@ -55,13 +56,19 @@ public class Application {
     public static void checkSortArray(int[] arr) {
         int[] tempArray = Arrays.copyOf(arr, arr.length);
         Arrays.sort(tempArray);
-        System.out.println(Arrays.toString(arr));
-        System.out.println(Arrays.toString(tempArray));
         if (Arrays.equals( arr, tempArray)) {
             System.out.println("Элементы массива идут по возрастанию");
         }
         else {
             System.out.println("Элементы массива не идут по возрастанию");
+        }
+    }
+    public static void reverseArray(int[] arr) {
+        int temp;
+        for (int i = 0; i < arr.length / 2; i++) {
+            temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
         }
     }
 }
