@@ -1,10 +1,15 @@
 package ru.otus.java.basic.homeworks.homework3;
 
+import java.util.Arrays;
+
 public class Application {
     public static void main(String[] args) {
         int[][] array1 = {{1, -1, 1}, {3, 1, -3}, {6, -3, 2}};
+        int[][] array2 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+
 //        sumOfPositiveElements(array1);
-        printSquare(4);
+//        printSquare(4);
+        setNullDiagonal(array2);
     }
 
     public static void sumOfPositiveElements(int[][] array) {
@@ -25,6 +30,11 @@ public class Application {
                 System.out.print("*");
             }
             System.out.println();
+        }
+    }
+    public static void setNullDiagonal(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+                array[i][i] = 0;
         }
     }
 }
