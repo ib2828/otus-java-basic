@@ -4,12 +4,17 @@ import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        int[][] array1 = {{1, -1, 1}, {3, 1, -3}, {6, -3, 2}};
+        int[][] array1 = {{1, -1, 1}, {3, 1, -10}, {6, -3, 2}};
         int[][] array2 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+        int[][] array3 = {{1, 1, 1}, {6}, {1, 1, 1}};
 
-//        sumOfPositiveElements(array1);
-//        printSquare(4);
+        sumOfPositiveElements(array1);
+        printSquare(4);
         setNullDiagonal(array2);
+        int y = findMax(array1);
+        System.out.println(y);
+        int z = sumTwoStringArray(array3);
+        System.out.println(z);
     }
 
     public static void sumOfPositiveElements(int[][] array) {
@@ -32,9 +37,33 @@ public class Application {
             System.out.println();
         }
     }
+
     public static void setNullDiagonal(int[][] array) {
         for (int i = 0; i < array.length; i++) {
-                array[i][i] = 0;
+            array[i][i] = 0;
         }
+    }
+
+    public static int findMax(int[][] array) {
+        int result = array[0][0];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j] > result) {
+                    result = array[i][j];
+                }
+            }
+        }
+        return result;
+    }
+
+    public static int sumTwoStringArray(int[][] array) {
+        int result = 0;
+        if (array[1].length == 0) {
+            return -1;
+        }
+        for (int i = 0; i < array[1].length; i++) {
+            result += array[1][i];
+        }
+        return result;
     }
 }
