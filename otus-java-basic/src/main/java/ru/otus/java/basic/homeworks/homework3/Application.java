@@ -8,7 +8,8 @@ public class Application {
         int[][] array2 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
         int[][] array3 = {{1, 1, 1}, {6}, {1, 1, 1}};
 
-        sumOfPositiveElements(array1);
+        int sumElements = sumOfPositiveElements(array1);
+        System.out.println(sumElements);
         printSquare(4);
         setNullDiagonal(array2);
         int y = findMax(array1);
@@ -17,7 +18,7 @@ public class Application {
         System.out.println(z);
     }
 
-    public static void sumOfPositiveElements(int[][] array) {
+    public static int sumOfPositiveElements(int[][] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -26,7 +27,7 @@ public class Application {
                 }
             }
         }
-        System.out.println(sum);
+        return sum;
     }
 
     public static void printSquare(int a) {
