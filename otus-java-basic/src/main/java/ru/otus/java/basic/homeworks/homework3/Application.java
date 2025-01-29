@@ -6,7 +6,7 @@ public class Application {
     public static void main(String[] args) {
         int[][] array1 = {{1, -1, 1}, {3, 1, -10}, {6, -3, 2}};
         int[][] array2 = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
-        int[][] array3 = {{1, 1, 1}, {6}, {1, 1, 1}};
+        int[][] array3 = {{1, 1, 1}, {6, 5, 12}, {1, 1, 1}};
 
         int sumElements = sumOfPositiveElements(array1);
         System.out.println(sumElements);
@@ -59,11 +59,12 @@ public class Application {
 
     public static int sumTwoStringArray(int[][] array) {
         int result = 0;
-        if (array[1].length == 0) {
-            return -1;
-        }
-        for (int i = 0; i < array[1].length; i++) {
-            result += array[1][i];
+        if (array.length > 1) {
+            for (int i = 0; i < array[1].length; i++) {
+                result += array[1][i];
+            }
+        } else {
+            result = -1;
         }
         return result;
     }
