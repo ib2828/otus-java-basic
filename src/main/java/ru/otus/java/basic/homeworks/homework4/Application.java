@@ -18,7 +18,7 @@ public class Application {
         };
         for (int i = 0; i < users.length; i++) {
             if (users[i].getAge() > 40) {
-                users[i].getUserInfo();
+                users[i].printUserInfo();
             }
         }
         System.out.println("##########################################################################################");

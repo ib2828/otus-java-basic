@@ -28,17 +28,16 @@ public class Box {
     }
 
     public void putItem() {
-        if (this.isOpened) {
-            if (this.isItem) {
-                System.out.println("Не удалось положить в коробку предмет. В коробке уже есть предмет");
-            } else {
-                this.isItem = true;
-                System.out.println("Предмет положен в коробку");
-            }
-        } else {
-            System.out.println("Коробка закрыта");
+        if (isOpened) {
+            System.out.println("Не удалось положить в коробку предмет. Коробка закрыта");
+            return;
         }
-
+        if (isItem) {
+            System.out.println("Не удалось положить в коробку предмет. В коробке уже есть предмет");
+            return;
+        }
+        isItem = true;
+        System.out.println("Предмет положен в коробку");
     }
 
     public void getItem() {
