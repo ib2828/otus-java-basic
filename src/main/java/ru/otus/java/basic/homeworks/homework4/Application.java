@@ -40,6 +40,7 @@ public class Application {
             System.out.println("4 Закрыть коробку");
             System.out.println("5 Положить предмет в коробку");
             System.out.println("6 Извлечь предмет из коробки");
+            System.out.println("0 Для выхода из программы");
             System.out.println("");
             System.out.println("");
             System.out.println("");
