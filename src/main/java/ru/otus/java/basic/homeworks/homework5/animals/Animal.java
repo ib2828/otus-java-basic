@@ -8,10 +8,10 @@ public class Animal {
     int enduranceRun;
     int enduranceSwim;
 
-    public int run(int distance){
+    public float run(int distance, int speedRun){
         return distance/speedRun;
     }
-    public int swim(int distance){
-        return  distance/speedSwim;
+    public float swim(int distance, int speedSwim){
+        return distance/speedSwim;
     }
 }
