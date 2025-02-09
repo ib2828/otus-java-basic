@@ -17,7 +17,7 @@ public class User {
         this.email = email;
     }
 
-    public void getUserInfo() {
+    public void printUserInfo() {
         System.out.print(this.surname + "  ");
         System.out.print(this.name + "  ");
         System.out.print(this.patronymic + "  ");
