@@ -1,17 +1,18 @@
 package ru.otus.java.basic.homeworks.homework5.animals;
 
-public class Animal {
+public abstract class Animal {
     String name;
     int speedRun;
     int speedSwim;
-    int endurance;
-    int enduranceRun;
-    int enduranceSwim;
+    int stamina;
+    int staminaOfRun;
+    int staminaOfSwim;
 
-    public float run(int distance, int speedRun){
-        return distance/speedRun;
+    public float run(int distance, int speedRun) {
+        return distance / speedRun;
     }
-    public float swim(int distance, int speedSwim){
-        return distance/speedSwim;
+
+    public float swim(int distance, int speedSwim) {
+        return distance / speedSwim;
     }
 }
