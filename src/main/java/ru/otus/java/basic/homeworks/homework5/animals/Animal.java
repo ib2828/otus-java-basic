@@ -1,12 +1,10 @@
 package ru.otus.java.basic.homeworks.homework5.animals;
 
 public abstract class Animal {
-    String name;
-    int speedRun;
-    int speedSwim;
-    int stamina;
-    int staminaOfRun;
-    int staminaOfSwim;
+    protected String name;
+    protected int speedRun;
+    protected int stamina;
+    protected int staminaOfRun;
 
     public float run(int distance, int speedRun) {
         return distance / speedRun;
@@ -14,5 +12,9 @@ public abstract class Animal {
 
     public float swim(int distance, int speedSwim) {
         return distance / speedSwim;
+    }
+
+    public void info() {
+        System.out.println("У " + name + " осталось " + this.stamina + " единиц выносливости");
     }
 }
