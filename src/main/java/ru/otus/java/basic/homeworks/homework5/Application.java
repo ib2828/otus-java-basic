@@ -1,4 +1,5 @@
 package ru.otus.java.basic.homeworks.homework5;
+
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -8,12 +9,13 @@ public class Application {
         int staminaDog = 100;
         int staminaHorse = 100;
         Scanner scanner = new Scanner(System.in);
+
         boolean nextLoop = true;
+        int numberAction = 0;
 
-        Cat cat = new Cat("Barsik",10,staminaCat);
-        Dog dog = new Dog("Tuzik",10,2,staminaDog);
-        Horse horse = new Horse("Wind",10,3,staminaHorse);
-
+        Cat cat = new Cat("Barsik", 10, staminaCat);
+        Dog dog = new Dog("Tuzik", 10, 2, staminaDog);
+        Horse horse = new Horse("Wind", 10, 3, staminaHorse);
 
         do {
             System.out.println("");
@@ -27,7 +29,17 @@ public class Application {
             switch (numberAnimal) {
                 case 1:
                     System.out.println("Информация о коте");
-                    cat.info();
+                    int catMethod = cat.getAction();
+                    if (catMethod == 1) {
+                        System.out.println("Кот побежал");
+                    }
+                    if (catMethod == 2) {
+                        System.out.println("Кот не умеет плавать");
+                    }
+                    if (catMethod == 3) {
+                        cat.info();
+                    }
+
                     break;
                 case 2:
                     System.out.println("Информация о собаке");
@@ -42,14 +54,15 @@ public class Application {
                     nextLoop = false;
                     break;
                 default:
-                    System.out.println("Спасибо! Вы выбрали несуществующее животное ");
+                    System.out.println("Вы выбрали несуществующее животное ");
                     break;
             }
         } while (nextLoop);
-//        System.out.println("Введите дистанцию в метрах");
-//        int distance = scanner.nextInt();
-//        System.out.println(distance);
+
+    }
 
 
+    public void actionAnimal() {
+        System.out.println();
     }
 }
