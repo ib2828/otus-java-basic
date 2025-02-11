@@ -8,9 +8,15 @@ public abstract class Animal {
     protected int stamina;
     protected int staminaOfRun;
 
-    public float run(int distance, int speedRun) {
-        this.stamina = this.stamina - distance;
-        return distance / speedRun;
+    public float run(int distance) {
+        if (this.stamina < distance) {
+            System.out.println("Не хватает выносливости");
+            return -1;
+        } else {
+            this.stamina = this.stamina - distance;
+            System.out.println("Животное пробежало дистанцию:" + distance);
+            return distance / this.speedRun;
+        }
     }
 
     public float swim(int distance, int speedSwim) {
