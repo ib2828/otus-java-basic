@@ -1,5 +1,7 @@
 package ru.otus.java.basic.homeworks.homework5;
 
+import ru.otus.java.basic.homeworks.homework5.animals.Animal;
+
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -24,24 +26,26 @@ public class Application {
             System.out.println("0 Для выхода из программы");
             System.out.println("");
             int numberAction = scanner.nextInt();
+//            делам два цикла, в первом запрашиваем животное а во втором запрашиваем действе
+//            Идея сделать функцию которая будет принимать три аргумента
+//            объект, действие
+//            Внутри функции бега и плавания вводить дистанцию
             switch (numberAction) {
                 case 1:
-                    System.out.println("Информация о собаке");
+                    actionAnimal(cat);
                     break;
                 case 2:
-                    System.out.println("Информация о собаке");
-                    dog.info();
+                    actionAnimal(dog);
                     break;
                 case 3:
-                    System.out.println("Информация о лошади");
-                    horse.info();
+                    actionAnimal(horse);
                     break;
                 case 0:
                     System.out.println("Спасибо! Вы закончили работу");
                     nextLoop = false;
                     break;
                 default:
-                    System.out.println("Вы выбрали несуществующее животное ");
+                    System.out.println("Вы выбрали несуществующее движение");
                     break;
             }
         } while (nextLoop);
@@ -49,8 +53,8 @@ public class Application {
     }
 
 
-    public void actionAnimal() {
-        System.out.println();
+    public static void actionAnimal(Animal a) {
+        a.info();
     }
 
     public int choiceOfAnimal() {
