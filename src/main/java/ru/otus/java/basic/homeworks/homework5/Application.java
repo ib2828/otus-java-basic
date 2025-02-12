@@ -9,9 +9,7 @@ public class Application {
         int staminaDog = 100;
         int staminaHorse = 100;
         Scanner scanner = new Scanner(System.in);
-
         boolean nextLoop = true;
-        int numberAction = 0;
 
         Cat cat = new Cat("Barsik", 10, staminaCat);
         Dog dog = new Dog("Tuzik", 10, 2, staminaDog);
@@ -28,19 +26,7 @@ public class Application {
             int numberAction = scanner.nextInt();
             switch (numberAction) {
                 case 1:
-
-//                    System.out.println("Информация о коте");
-//                    int catMethod = cat.getAction();
-//                    if (catMethod == 1) {
-//                        System.out.println("Кот побежал");
-//                    }
-//                    if (catMethod == 2) {
-//                        System.out.println("Кот не умеет плавать");
-//                    }
-//                    if (catMethod == 3) {
-//                        cat.info();
-//                    }
-
+                    System.out.println("Информация о собаке");
                     break;
                 case 2:
                     System.out.println("Информация о собаке");
@@ -77,16 +63,16 @@ public class Application {
         System.out.println("3 Лошадь");
         if ( numberAnimal == 1 ){
             System.out.println("Вы выбрали кота");
-            return 1:
+            return 1;
         } else if (numberAnimal == 2 ) {
             System.out.println("Вы выбрали собаку");
-            return 2:
+            return 2;
         } else if (numberAnimal == 3 ) {
             System.out.println("Вы выбрали лошадь");
-            return 3:
+            return 3;
         } else {
             System.out.println("Вы выбрали несуществующее животное ");
-            return 0
+            return 0;
         }
     }
 }
