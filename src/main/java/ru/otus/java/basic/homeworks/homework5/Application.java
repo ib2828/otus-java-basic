@@ -19,26 +19,27 @@ public class Application {
 
         do {
             System.out.println("");
-            System.out.println("Введите номер необходимого животного");
-            System.out.println("1 Кот Barsik");
-            System.out.println("2 Собака Tuzik");
-            System.out.println("3 Лошадь Wind");
+            System.out.println("Введите необходимое действие");
+            System.out.println("1 Бег");
+            System.out.println("2 Плавание");
+            System.out.println("3 Информация о животном");
             System.out.println("0 Для выхода из программы");
             System.out.println("");
-            int numberAnimal = scanner.nextInt();
-            switch (numberAnimal) {
+            int numberAction = scanner.nextInt();
+            switch (numberAction) {
                 case 1:
-                    System.out.println("Информация о коте");
-                    int catMethod = cat.getAction();
-                    if (catMethod == 1) {
-                        System.out.println("Кот побежал");
-                    }
-                    if (catMethod == 2) {
-                        System.out.println("Кот не умеет плавать");
-                    }
-                    if (catMethod == 3) {
-                        cat.info();
-                    }
+
+//                    System.out.println("Информация о коте");
+//                    int catMethod = cat.getAction();
+//                    if (catMethod == 1) {
+//                        System.out.println("Кот побежал");
+//                    }
+//                    if (catMethod == 2) {
+//                        System.out.println("Кот не умеет плавать");
+//                    }
+//                    if (catMethod == 3) {
+//                        cat.info();
+//                    }
 
                     break;
                 case 2:
@@ -64,5 +65,28 @@ public class Application {
 
     public void actionAnimal() {
         System.out.println();
+    }
+
+    public int choiceOfAnimal() {
+        Scanner scannerChoice = new Scanner(System.in);
+        int numberAnimal = scannerChoice.nextInt();
+
+        System.out.println("Введите необходимое животное");
+        System.out.println("1 Кот");
+        System.out.println("2 Собака");
+        System.out.println("3 Лошадь");
+        if ( numberAnimal == 1 ){
+            System.out.println("Вы выбрали кота");
+            return 1:
+        } else if (numberAnimal == 2 ) {
+            System.out.println("Вы выбрали собаку");
+            return 2:
+        } else if (numberAnimal == 3 ) {
+            System.out.println("Вы выбрали лошадь");
+            return 3:
+        } else {
+            System.out.println("Вы выбрали несуществующее животное ");
+            return 0
+        }
     }
 }
