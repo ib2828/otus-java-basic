@@ -1,44 +1,27 @@
 package ru.otus.java.basic.homeworks.homework5.animals;
 
-import java.util.Scanner;
-
 public abstract class Animal {
     protected String name;
     protected int speedRun;
-    protected int stamina;
+    protected int endurance;
     protected int staminaOfRun;
-
     public float run(int distance) {
-        if (this.stamina < distance) {
+        if (this.endurance < distance) {
             System.out.println("Не хватает выносливости");
             return -1;
         } else {
-            this.stamina = this.stamina - distance;
+            this.endurance = this.endurance - distance;
             System.out.println("Животное пробежало дистанцию:" + distance);
+            System.out.println("Время затраченное на бег:" + distance);
+
             return distance / this.speedRun;
         }
     }
 
-    public float swim(int distance, int speedSwim) {
-        return distance / speedSwim;
-    }
+    public abstract void swim(int distance);
 
     public void info() {
-        System.out.println("У " + name + " осталось " + this.stamina + " единиц выносливости");
+        System.out.println("У " + this.name + " осталось " + this.endurance + " единиц выносливости");
     }
 
-    public int getAction() {
-        Scanner scannerAction = new Scanner(System.in);
-        System.out.println("Введите номер необходимого дейстия");
-        System.out.println("1 Животное побежало");
-        System.out.println("2 Животное поплыло");
-        System.out.println("3 Информация о животном");
-        int methodAction = scannerAction.nextInt();
-        if (methodAction != 1 || methodAction != 2 || methodAction != 3 ) {
-            return methodAction;
-        }
-        else {
-            return 0;
-        }
-    }
 }
