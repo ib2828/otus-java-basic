@@ -4,7 +4,6 @@ public abstract class Animal {
     protected String name;
     protected int speedRun;
     protected int endurance;
-    protected int staminaOfRun;
     public float run(int distance) {
         if (this.endurance < distance) {
             System.out.println("Не хватает выносливости");
@@ -12,8 +11,6 @@ public abstract class Animal {
         } else {
             this.endurance = this.endurance - distance;
             System.out.println("Животное пробежало дистанцию:" + distance);
-            System.out.println("Время затраченное на бег:" + distance);
-
             return distance / this.speedRun;
         }
     }

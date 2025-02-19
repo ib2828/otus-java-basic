@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Application {
     private static Cat cat = new Cat("Barsik", 10, 20);
     private static Dog dog = new Dog("Tuzik", 10, 2, 30);
-    private static Horse horse = new Horse("Wind", 10, 3, 40);
+    private static Horse horse = new Horse("Wind", 10, 4, 40);
 
     public static void main(String[] args) {
         Animal currentAnimal;
@@ -14,8 +14,7 @@ public class Application {
         if (currentAnimal == null) {
             System.out.println("Вы выбрали несуществующее животное");
             System.exit(0);
-        }
-        ;
+        };
         getAnimalAction(currentAnimal);
     }
 
@@ -42,20 +41,21 @@ public class Application {
         System.out.println("2 Плавание");
         System.out.println("3 Информация");
         int action = scannerAction.nextInt();
+        float timeAction;
         switch (action) {
             case 1 -> {
-                    distance1 = getDistance();
-                    System.out.println("Бег");
-                    System.out.println("Бег");
-                    System.out.println("Бег" + distance1);
+                timeAction = animal.run(getDistance());
+                if ( timeAction != -1) {
+                    System.out.println("Время затраченное на бег: " + timeAction);
+                }
             }
             case 2 -> {
-                    if ( animal == cat ){
-                        animal.swim(0);
-                    } else {
-                        distance1 = getDistance();
-                        System.out.println("Плавание" + distance1);
-                    }
+                if ( animal == cat ){
+                    animal.swim(0);
+                } else {
+                    timeAction = animal.swim(getDistance());
+                    System.out.println("Время затраченное на плавание: " + timeAction);
+                }
             }
             case 3 -> animal.info();
             default -> System.out.println("Выбрали неправильное действие");
