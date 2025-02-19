@@ -54,7 +54,9 @@ public class Application {
                     animal.swim(0);
                 } else {
                     timeAction = animal.swim(getDistance());
-                    System.out.println("Время затраченное на плавание: " + timeAction);
+                    if ( timeAction != -1) {
+                        System.out.println("Время затраченное на плавание: " + timeAction);
+                    }
                 }
             }
             case 3 -> animal.info();

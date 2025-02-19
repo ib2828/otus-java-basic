@@ -4,6 +4,7 @@ import ru.otus.java.basic.homeworks.homework5.animals.Animal;
 
 public class Horse extends Animal {
     int speedSwim;
+    int enduranceSwim = 4;
 
     public Horse(String name, int speedRun, int speedSwim, int endurance) {
         this.name = name;
@@ -13,8 +14,8 @@ public class Horse extends Animal {
     }
 
     @Override
-    public void swim(int distance) {
-        if (this.endurance * 4 < distance) {
+    public float swim(int distance) {
+        if (this.endurance * this.enduranceSwim < distance) {
             System.out.println("Не хватает выносливости");
             return -1;
         } else {

@@ -15,7 +15,7 @@ public abstract class Animal {
         }
     }
 
-    public abstract void swim(int distance);
+    public abstract float swim(int distance);
 
     public void info() {
         System.out.println("У " + this.name + " осталось " + this.endurance + " единиц выносливости");
