@@ -18,13 +18,11 @@ public class Plate {
     }
 
     public boolean reducingFood(int sizeFood) {
-        if this.currentAmountOfFood - sizeFood >= 0) {
+        if (this.currentAmountOfFood - sizeFood >= 0) {
             this.currentAmountOfFood -= sizeFood;
             return true;
         } else {
             return false;
         }
-
-        return ();
     }
 }
