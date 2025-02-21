@@ -5,12 +5,31 @@ public class Cat {
     private int appetite;
     private boolean satiety;
 
-    public Cat(String name, int appetite){
+    public Cat(String name, int appetite) {
         this.name = name;
         this.appetite = appetite;
         this.satiety = false;
     }
-    public void setSatiety(Boolean satiety){
+
+    public void setSatiety(Boolean satiety) {
         this.satiety = satiety;
+    }
+
+    public boolean getSatiety() {
+        return this.satiety;
+    }
+
+    public boolean setEat(int countEat) {
+        if (countEat >= this.appetite){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public int getAppetite(){
+        return this.appetite;
+    }
+    public String getName(){
+        return this.name;
     }
 }

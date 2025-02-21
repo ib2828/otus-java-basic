@@ -25,4 +25,9 @@ public class Plate {
             return false;
         }
     }
+
+    public int getCurrentAmountOfFood(){
+        return this.currentAmountOfFood;
+    }
+
 }
