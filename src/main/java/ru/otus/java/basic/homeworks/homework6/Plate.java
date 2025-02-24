@@ -9,24 +9,28 @@ public class Plate {
         this.currentAmountOfFood = maximumAmountOfFood;
     }
 
-    public void putFootToPlate(int sizeFood) {
-        if (this.currentAmountOfFood + sizeFood < this.maximumAmountOfFood) {
-            this.currentAmountOfFood += sizeFood;
+    public void addFood(int foodSize) {
+        if (this.currentAmountOfFood + foodSize < this.maximumAmountOfFood) {
+            this.currentAmountOfFood += foodSize;
         } else {
             System.out.println("Указанное количество еды не поместиться в тарелку");
         }
     }
 
-    public boolean reducingFood(int sizeFood) {
-        if (this.currentAmountOfFood - sizeFood >= 0) {
-            this.currentAmountOfFood -= sizeFood;
+    public boolean foodAmount(int foodSize) {
+        if (foodSize <= 0) {
+            System.out.println("Количество еды указанно некорректно, оно должно быть положительным");
+            return false;
+        }
+        if (this.currentAmountOfFood - foodSize >= 0) {
+            this.currentAmountOfFood -= foodSize;
             return true;
         } else {
             return false;
         }
     }
 
-    public int getCurrentAmountOfFood(){
+    public int getCurrentAmountOfFood() {
         return this.currentAmountOfFood;
     }
 

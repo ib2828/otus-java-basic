@@ -11,10 +11,9 @@ public class Application {
         };
         for (int i = 0; i < cats.length; i++) {
             if (cats[i].setEat(plate.getCurrentAmountOfFood())) {
-                plate.reducingFood(cats[i].getAppetite());
+                plate.foodAmount(cats[i].getAppetite());
                 cats[i].setSatiety(true);
             }
-
             if (cats[i].getSatiety()) {
                 System.out.println("Кот " + cats[i].getName() + " сытый");
             } else {

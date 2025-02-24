@@ -7,7 +7,12 @@ public class Cat {
 
     public Cat(String name, int appetite) {
         this.name = name;
-        this.appetite = appetite;
+        if ( appetite > 0) {
+            this.appetite = appetite;
+        } else {
+            this.appetite = 0;
+            System.out.println("Вы передали некорректное значение аппетита (меньше нуля)");
+        }
         this.satiety = false;
     }
 
