@@ -42,18 +42,17 @@ public class Application {
         return listLocal;
     }
 
-    public static int sumElements(ArrayList list) {
+    public static int sumElements(ArrayList<Integer> list) {
         int s = 0;
         for (int i = 0; i < list.size(); i++) {
-            int a = (int) list.get(i);
-            if (a > 5) {
-                s += a;
+            if (list.get(i) > 5) {
+                s += list.get(i);
             }
         }
         return s;
     }
 
-    public static ArrayList numberReplace(ArrayList list, int x) {
+    public static ArrayList numberReplace(ArrayList<Integer> list, int x) {
         for (int i = 0; i < list.size(); i++) {
             list.set(i, x);
         }
