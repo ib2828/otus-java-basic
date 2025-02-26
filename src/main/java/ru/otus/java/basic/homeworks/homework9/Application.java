@@ -14,7 +14,7 @@ public class Application {
         System.out.println("Сумма элементов, значение которых больше 5");
         System.out.println(sumElements(elements));
         System.out.println("Замена всех элементов одним числом");
-        System.out.println(replaceNumber(elements, 9));
+        System.out.println(numberReplace(elements, 9));
         System.out.println("Замена всех элементов одним числом");
         System.out.println(numberIncrease(elements, 9));
     }
@@ -37,7 +37,7 @@ public class Application {
         }
         return s;
     }
-    public static ArrayList replaceNumber(ArrayList list, int x) {
+    public static ArrayList numberReplace(ArrayList list, int x) {
         for (int i =0; i < list.size(); i++) {
             list.set(i, x);
         }
