@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Application {
-    private static Employee Bob = new Employee("Bob", 20);
-    private static Employee Jon = new Employee("Jon", 30);
-    private static Employee Nick = new Employee("Nick", 40);
-    private static Employee Mike = new Employee("Mike", 50);
+    private static Employee Bob = new Employee("Bob", 50);
+    private static Employee Jon = new Employee("Jon", 40);
+    private static Employee Nick = new Employee("Nick", 30);
+    private static Employee Mike = new Employee("Mike", 20);
 
     public static void main(String[] args) {
         ArrayList<Integer> elements = new ArrayList<>();
@@ -36,7 +36,8 @@ public class Application {
         System.out.println(getlistEmployeeByMinAge(employees, 50));
         System.out.println("Проверка среднего возраста сотрудников");
         checkEmployeeByAge(employees, 34);
-
+        System.out.println("Имя самого молодого сотрудника");
+        System.out.println(getYoungEmployee(employees).getName());
     }
 
     public static ArrayList filingList(int minValue, int maxValue) {
@@ -103,4 +104,15 @@ public class Application {
             System.out.println("Средний возраст сотрудников не превышает указанный аргумент");
         }
     }
+
+    public static Employee getYoungEmployee(ArrayList<Employee> employees) {
+        Employee youngEmployee = employees.get(0);
+        for (int i = 1; i < employees.size(); i++) {
+            if (youngEmployee.getAge() > employees.get(i).getAge()) {
+                youngEmployee = employees.get(i);
+            }
+        }
+        return youngEmployee;
+    }
 }
+
