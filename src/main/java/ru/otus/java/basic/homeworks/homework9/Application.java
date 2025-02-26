@@ -32,6 +32,9 @@ public class Application {
         System.out.println(numberIncrease(elements, 10));
         System.out.println("Список имен сотрудников");
         System.out.println(getEmployeesName(employees));
+        System.out.println("Список имен сотрудников с отбором по возрасту");
+        System.out.println(getlistEmployeeByMinAge(employees,50));
+
     }
 
     public static ArrayList filingList(int minValue, int maxValue) {
@@ -74,4 +77,15 @@ public class Application {
         }
         return names;
     }
+
+    public static List getlistEmployeeByMinAge(ArrayList<Employee> employees, int minAge) {
+        ArrayList<String> names = new ArrayList<String>();
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees.get(i).getAge() >= minAge) {
+                names.add(employees.get(i).getName());
+            }
+        };
+        return names;
+    }
+
 }
