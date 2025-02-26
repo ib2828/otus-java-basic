@@ -33,7 +33,9 @@ public class Application {
         System.out.println("Список имен сотрудников");
         System.out.println(getEmployeesName(employees));
         System.out.println("Список имен сотрудников с отбором по возрасту");
-        System.out.println(getlistEmployeeByMinAge(employees,50));
+        System.out.println(getlistEmployeeByMinAge(employees, 50));
+        System.out.println("Проверка среднего возраста сотрудников");
+        checkEmployeeByAge(employees, 34);
 
     }
 
@@ -70,7 +72,7 @@ public class Application {
         return list;
     }
 
-    public static List getEmployeesName(ArrayList<Employee> employees){
+    public static List getEmployeesName(ArrayList<Employee> employees) {
         ArrayList<String> names = new ArrayList<String>();
         for (int i = 0; i < employees.size(); i++) {
             names.add(employees.get(i).getName());
@@ -84,8 +86,21 @@ public class Application {
             if (employees.get(i).getAge() >= minAge) {
                 names.add(employees.get(i).getName());
             }
-        };
+        }
+        ;
         return names;
     }
 
+    public static void checkEmployeeByAge(ArrayList<Employee> employees, int middleAge) {
+        int summAge = 0;
+        for (int i = 0; i < employees.size(); i++) {
+            summAge += employees.get(i).getAge();
+        }
+        ;
+        if (summAge / employees.size() > middleAge) {
+            System.out.println("Средний возраст сотрудников превышает указанный аргумент");
+        } else {
+            System.out.println("Средний возраст сотрудников не превышает указанный аргумент");
+        }
+    }
 }
