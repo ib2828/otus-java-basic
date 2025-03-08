@@ -7,34 +7,18 @@ public class Cat {
 
     public Cat(String name, int appetite) {
         this.name = name;
-        if ( appetite > 0) {
-            this.appetite = appetite;
-        } else {
-            this.appetite = 0;
-            System.out.println("Вы передали некорректное значение аппетита (меньше нуля)");
+        this.appetite = appetite;
+        satiety = false;
+    }
+
+    public void feed(Plate plate) {
+        if (!plate.decreaseFood(appetite)) {
+            return;
         }
-        this.satiety = false;
+        satiety = true;
     }
 
-    public void setSatiety(Boolean satiety) {
-        this.satiety = satiety;
-    }
-
-    public boolean getSatiety() {
-        return this.satiety;
-    }
-
-    public boolean setEat(int countEat) {
-        if (countEat >= this.appetite){
-            return true;
-        } else {
-            return false;
-        }
-    }
-    public int getAppetite(){
-        return this.appetite;
-    }
-    public String getName(){
-        return this.name;
+    public void info() {
+        System.out.println("Кот " + name + (satiety ? " сыт" : " голоден"));
     }
 }
