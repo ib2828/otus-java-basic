@@ -14,29 +14,26 @@ public class Application {
         personDataBase.add(person2);
         personDataBase.add(person3);
         personDataBase.add(person4);
-        // personDataBase.add(person5);                // IllegalArgumentException
-        System.out.println(personDataBase.toString()); // {1={Петр, DIRECTOR, 1}, 2={Максим, BRANCH_DIRECTOR, 2}, 3={Олег, DEVELOPER, 3}, 4={Дмитрий, QA, 4}}
+        System.out.println(personDataBase.toString());
         System.out.println();
 
-        System.out.println(personDataBase.findById(1L));    // {Петр, DIRECTOR, 1}
-        System.out.println(personDataBase.findById(2L));    // {Максим, BRANCH_DIRECTOR, 2}
-        System.out.println(personDataBase.findById(3L));    // {Олег, DEVELOPER, 3}
-        System.out.println(personDataBase.findById(4L));    // {Дмитрий, QA, 4}
-        // System.out.println(personDataBase.findById(5L)); // IllegalArgumentException
+        System.out.println(personDataBase.findById(1L));
+        System.out.println(personDataBase.findById(2L));
+        System.out.println(personDataBase.findById(3L));
+        System.out.println(personDataBase.findById(4L));
         System.out.println();
 
-        System.out.println(personDataBase.isManager(person1));  // true
-        System.out.println(personDataBase.isManager(person2));  // true
-        System.out.println(personDataBase.isManager(person3));  // false
-        System.out.println(personDataBase.isManager(person4));  // false
-        System.out.println(personDataBase.isManager(person5));  // false
+        System.out.println(personDataBase.isManager(person1));
+        System.out.println(personDataBase.isManager(person2));
+        System.out.println(personDataBase.isManager(person3));
+        System.out.println(personDataBase.isManager(person4));
+        System.out.println(personDataBase.isManager(person5));
         System.out.println();
 
-        System.out.println(personDataBase.isEmployee(1L));  // false
-        System.out.println(personDataBase.isEmployee(2L));  // false
-        System.out.println(personDataBase.isEmployee(3L));  // true
-        System.out.println(personDataBase.isEmployee(4L));  // true
-        // System.out.println(personDataBase.isEmployee(5L));  // IllegalArgumentException
+        System.out.println(personDataBase.isEmployee(1L));
+        System.out.println(personDataBase.isEmployee(2L));
+        System.out.println(personDataBase.isEmployee(3L));
+        System.out.println(personDataBase.isEmployee(4L));
         System.out.println();
     }
 }
