@@ -11,5 +11,15 @@ public enum Position {
     JANITOR,
     PLUMBER,
     BRANCH_DIRECTOR,
-    JUNIOR_DEVELOPER
+    JUNIOR_DEVELOPER;
+
+    public String getName() {
+        return name;
+    }
+
+    final String name;
+
+    Position(String name) {
+        this.name = name;
+    }
 }
